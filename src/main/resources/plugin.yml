@@ -1,0 +1,62 @@
+name: PlaytimeRewards
+version: '${project.version}'
+main: me.justahuman.playtimerewards.PlaytimeRewards
+api-version: 1.17
+prefix: PR
+authors: [ JustAHuman_xD ]
+description: Plugin for servers that want to grant rewards based off of Playtime!
+
+commands:
+  playtimerewards:
+    description: /playtimerewards
+    usage: /playtimerewards <sub>
+    aliases: [ pr, playr ]
+
+permissions:
+  playtimerewards.*:
+    default: op
+    description: Gives access to all Commands
+    children:
+      playtimerewards.admin: true
+
+  playtimerewards.admin:
+    default: op
+    description: Gives access to most Commands
+    children:
+      playtimerewards.reload: true
+      playtimerewards.reward: true
+      playtimerewards.reward.add: true
+      playtimerewards.reward.remove: true
+      playtimerewards.reward.clear: true
+
+  playtimerewards.reload:
+    default: op
+    description: Gives access to Reload Command
+
+  playtimerewards.check:
+    default: op
+    description: Gives access to the Parent Check Command
+
+  playtimerewards.check.online:
+    default: op
+    description: Gives access to Checking an Online Player's Playtime
+
+  playtimerewards.check.offline:
+    default: op
+    description: Gives access to Checking an Offline Player's Playtime
+
+  playtimerewards.reward:
+    default: op
+    description: Gives access to the Parent Reward Command
+
+  playtimerewards.reward.add:
+    default: op
+    description: Gives access to Reward Add Command
+
+  playtimerewards.reward.remove:
+    default: op
+    description: Gives access to Reward Remove Command
+
+  playtimerewards.reward.clear:
+    default: op
+    description: Gives access to Reward Clear Command

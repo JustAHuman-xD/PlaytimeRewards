@@ -1,0 +1,57 @@
+#How often to check if a Player has met a Requirement
+#This is in seconds
+#So 60 seconds a minute, for 5 minutes, 60 * 5 = 300
+check-period: 30
+
+playtime-rewards:
+  #To add a reward follow this Format
+  #time (in seconds): list of commands
+  #{player} will fill it out for whatever player, if you have any other placeholders you want support for let me know
+  #Lets say you wanted to give a rank to someone for playing for 1 hour
+  #That would look like this:
+  #60 seconds a minute, for 1 minutes, 60 * 1 = 60
+  new-example:
+    time: 60
+    effects:
+      sound:
+        #The path for the Sound, easy way to find this is getting the tab completion from /playsound
+        sound-path: minecraft:entity.player.levelup
+
+        #How loud the sound should be
+        volume: 1
+
+        #What the pitch should be
+        pitch: 1
+      title:
+        #What the Main text should be (Big Text)
+        title-text: "Example Main Title"
+
+        #What the Sub text should be (Small Text)
+        subtitle-text: "Example Sub Title"
+      firework:
+        #How long the firework should fly, 1
+        lifetime: 1
+
+        #Should the firework Flicker
+        flicker: false
+
+        #Should the firework have a Trail
+        trail: false
+
+        #What shape should the Firework be?
+        #Availible Shapes: Small-Ball, Large-Ball, Star, Creeper, Burst
+        shape: Star
+
+        #What Colors should the Firework Have?
+        #Color Formatting:
+        #red:green:blue
+
+        #For example
+        #255:0:0
+        #Produces a red color
+        explosion-colors:
+          - "255:0:0"
+        fade-colors:
+          - "255:100:0"
+    commands:
+      - "say {player} has reached 1 minute"

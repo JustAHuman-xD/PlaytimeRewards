@@ -1,0 +1,62 @@
+name: EotaTools
+version: '1.0'
+main: me.justahuman.eotatools.EotaTools
+api-version: 1.17
+prefix: EOTA
+authors: [ JustAHuman_xD ]
+description: Tools for EOTA
+
+commands:
+  eotatools:
+    description: /eotatools
+    usage: /eotatools <sub>
+    aliases: [ eotat, etools ]
+
+permissions:
+  eotatools.*:
+    default: op
+    description: Gives access to all Commands
+    children:
+      eotatools.admin: true
+
+  eotatools.admin:
+    default: op
+    description: Gives access to most Commands
+    children:
+      eotatools.reload: true
+      eotatools.reward: true
+      eotatools.reward.add: true
+      eotatools.reward.remove: true
+      eotatools.reward.clear: true
+
+  eotatools.reload:
+    default: op
+    description: Gives access to Reload Command
+
+  eotatools.check:
+    default: op
+    description: Gives access to the Parent Check Command
+
+  eotatools.check.online:
+    default: op
+    description: Gives access to Checking an Online Player's Playtime
+
+  eotatools.check.offline:
+    default: op
+    description: Gives access to Checking an Offline Player's Playtime
+
+  eotatools.reward:
+    default: op
+    description: Gives access to the Parent Reward Command
+
+  eotatools.reward.add:
+    default: op
+    description: Gives access to Reward Add Command
+
+  eotatools.reward.remove:
+    default: op
+    description: Gives access to Reward Remove Command
+
+  eotatools.reward.clear:
+    default: op
+    description: Gives access to Reward Clear Command

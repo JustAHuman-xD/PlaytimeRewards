@@ -1,0 +1,57 @@
+#How often to check if a Player has met a Requirement
+#This is in seconds
+#So 60 seconds a minute, for 5 minutes, 60 * 5 = 300
+check-period: 30
+
+playtime-rewards:
+  #To add a reward follow this Format
+  #time (in seconds): list of commands
+  #{player} will fill it out for whatever player, if you have any other placeholders you want support for let me know
+  #Lets say you wanted to give a rank to someone for playing for 1 hour
+  #That would look like this:
+  #60 seconds a minute, for 1 minutes, 60 * 1 = 60
+  ghost:
+    time: 172800 #60 seconds * 60 minutes * 24 hours * 2 days
+    effects:
+      sound:
+        sound-path: minecraft:entity.player.levelup
+        volume: 1
+        pitch: 1
+    commands:
+      - "lp user {player} parent add GHOST"
+  beast:
+    time: 604800
+    effects:
+      sound:
+        sound-path: minecraft:entity.player.levelup
+        volume: 1
+        pitch: 1
+    commands:
+      - "lp user {player} parent add BEAST"
+  seeker:
+    time: 1555200
+    effects:
+      sound:
+        sound-path: minecraft:entity.player.levelup
+        volume: 1
+        pitch: 1
+    commands:
+      - "lp user {player} parent add SEEKER"
+  guardian:
+    time: 2592000
+    effects:
+      sound:
+        sound-path: minecraft:entity.player.levelup
+        volume: 1
+        pitch: 1
+    commands:
+      - "lp user {player} parent add GUARDIAN"
+  palladium:
+    time: 1555200
+    effects:
+      sound:
+        sound-path: minecraft:entity.player.levelup
+        volume: 1
+        pitch: 1
+    commands:
+      - "lp user {player} parent add PALLADIUM"
