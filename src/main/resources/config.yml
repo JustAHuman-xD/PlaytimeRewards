@@ -10,48 +10,48 @@ playtime-rewards:
   #Lets say you wanted to give a rank to someone for playing for 1 hour
   #That would look like this:
   #60 seconds a minute, for 1 minutes, 60 * 1 = 60
-  ghost:
-    time: 172800 #60 seconds * 60 minutes * 24 hours * 2 days
+  new-example:
+    time: 60
     effects:
       sound:
+        #The path for the Sound, easy way to find this is getting the tab completion from /playsound
         sound-path: minecraft:entity.player.levelup
+
+        #How loud the sound should be
         volume: 1
+
+        #What the pitch should be
         pitch: 1
+      title:
+        #What the Main text should be (Big Text)
+        title-text: "Example Main Title"
+
+        #What the Sub text should be (Small Text)
+        subtitle-text: "Example Sub Title"
+      firework:
+        #How long the firework should fly, 1
+        lifetime: 1
+
+        #Should the firework Flicker
+        flicker: false
+
+        #Should the firework have a Trail
+        trail: false
+
+        #What shape should the Firework be?
+        #Availible Shapes: Small-Ball, Large-Ball, Star, Creeper, Burst
+        shape: Star
+
+        #What Colors should the Firework Have?
+        #Color Formatting:
+        #red:green:blue
+
+        #For example
+        #255:0:0
+        #Produces a red color
+        explosion-colors:
+          - "255:0:0"
+        fade-colors:
+          - "255:100:0"
     commands:
-      - "lp user {player} parent add GHOST"
-  beast:
-    time: 604800
-    effects:
-      sound:
-        sound-path: minecraft:entity.player.levelup
-        volume: 1
-        pitch: 1
-    commands:
-      - "lp user {player} parent add BEAST"
-  seeker:
-    time: 1555200
-    effects:
-      sound:
-        sound-path: minecraft:entity.player.levelup
-        volume: 1
-        pitch: 1
-    commands:
-      - "lp user {player} parent add SEEKER"
-  guardian:
-    time: 2592000
-    effects:
-      sound:
-        sound-path: minecraft:entity.player.levelup
-        volume: 1
-        pitch: 1
-    commands:
-      - "lp user {player} parent add GUARDIAN"
-  palladium:
-    time: 1555200
-    effects:
-      sound:
-        sound-path: minecraft:entity.player.levelup
-        volume: 1
-        pitch: 1
-    commands:
-      - "lp user {player} parent add PALLADIUM"
+      - "say {player} has reached 1 minute"
