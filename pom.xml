@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.justahuman</groupId>
-    <artifactId>EotaTools</artifactId>
+    <artifactId>PlaytimeRewards</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>EotaTools</name>
+    <name>Playtime Rewards</name>
 
-    <description>Tools for EOTA</description>
+    <description>Playtime Based Command Rewards</description>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
